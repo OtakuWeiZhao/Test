@@ -1,0 +1,24 @@
+<body>
+
+<canvas id="demoCanvas" width="500" height="500">
+  <p>
+  Hello
+  </p>
+</canvas>
+<!-- 下面将演示一种绘制矩形的demo -->
+<script type="text/javascript">
+
+var canvasDom = document.getElementById("demoCanvas");
+
+var context = canvasDom.getContext('2d');
+
+context.strokeStyle = "red";
+
+context.strokeRect(10,10,190,100);
+
+context.fillStyle = "blue";
+
+context.fillRect(110,110,100,100);
+
+</script>
+</body>

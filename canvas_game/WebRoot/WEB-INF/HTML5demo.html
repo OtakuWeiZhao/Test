@@ -1,0 +1,74 @@
+<input type="number" name="demoNumber" min="1" max="100" step="1"/>
+
+<input type="email" name="email" placeholder="please"/>
+
+<input type="range" min="0" max="50" step="5" name="rangedemo" value="0"/>
+
+<form oninput="output.value=parseInt(range.value)"/>
+  <input type="range" min="0" max="100" step="5" name="range" value="0"/>
+  <output name="output">0</output>
+</form>
+
+<input type="date" name="datedemo"/>
+
+<input type="color" name="colordemo"/>
+
+<input type="text" autocompleter="on" name="demoAutoComplete" list="autoNames" />
+<datalist id="autoNames">
+  <option value="bulding"></option>
+  <option value="HTML5"></option>
+  <option value="label"></option>
+</datalist>
+
+ <input type="text" autofocus="autofocus" required pattern="\d+"/>
+
+<input type="text" form="demoform" name="demo"/>
+
+<fieldset>
+  <legend>FormDemo: The lastet Boswer Opera suppot well</legend>
+  <form  action="" method="POST" id="form1" oninput="output.value=parseInt(range.value)">
+    <input type="text" autofocus="autofocus" required pattern"\d+" name="auto" placeholder="need to fill"/>
+    <input type="number" autofocus="demoNumber" min="1" max="100" step="2"/>
+    <input type="email" placeholder="please input your email"/>
+    <input type="url" name="url" placeholder="please input correct url"/>
+      <br/>
+        Date:<input type="datetime" name="time"/>
+        Color:<input type="color" name="color"/><br/>
+      <br/>
+    <input type="range" min="0" max="50" step="5" name="range" value="0"/>
+    <output name="output">0</output>
+    <br/>
+    <input type="submit" value="submitted"/>
+  </form>
+    <input type="text" form="form1" name="demo"/>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<body>
+
+<canvas id="demoCanvas" width="500" height="500">
+  <p>
+  Hello
+  </p>
+</canvas>
+<!-- 下面将演示一种绘制矩形的demo -->
+<script type="text/javascript">
+
+var canvasDom = document.getElementById("demoCanvas");
+
+var context = canvasDom.getContext('2d');
+
+context.beginPath();
+context.moveTo(20,20);
+context.lineTo(200,200);
+context.lineTo(400,20);
+context.closePath();
+context.lineWidth=2.0;//设置线宽
+context.strokeStyle = "#CC0000";
+context.stroke();
+
+
+</script>
+</body>
