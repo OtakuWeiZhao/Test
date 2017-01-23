@@ -40,11 +40,11 @@ Markdown是一种用来写作的轻量级[标记语言]
 例如: **这是粗体** *这是斜体*
 
 ## 表格
-|Tables        |Are             |cool    |
-| ------------ |:--------------:| ------:|
-|col 3 is      |right-aligned   |   $1600|
-|col 2 is      |centered        |     $12|
-|zebra stripes |are neat        |      $1|
+| Header One     | Header Two     | Header Three   |
+| :------------- | :------------- | :------------- |
+| Item One       | Item Two       | Item Two       |
+| col Three      | col Three      | col Three      |
+
 
 ## 代码框
 `code`
