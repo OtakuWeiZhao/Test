@@ -83,21 +83,27 @@
 *选择哪些行*
 
 `select selection_list`
+
 *从何处选择行*
 
 `from table_list`
+
 *行必须满足什么条件*
 
 `where primary_constraint`
+
 *怎样对结果进行分组*
 
 `group by grouping columns`
+
 *行必须满足的第二条件*
 
 `having secondary_constraint`
+
 *怎样对结果进行排序*
 
 `order by sorting_columns`
 
 *结果限定*
+
 `limit count`
