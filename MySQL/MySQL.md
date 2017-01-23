@@ -2,9 +2,14 @@
 
 ## 简介
 *MySQL* 是一个真正的多用户,多线程SQL数据库服务器.
+
 *MySQL* 是一个客户机/服务器结构的实现,它由一个服务器守护程序mysqld和很多不同的客户程序
-和库组成.*MySQL* 在windows上不区分大小写,Linux上表明区分大小写
+和库组成.
+
+*MySQL* 在windows上不区分大小写,Linux上表明区分大小写
+
 *MySQL* 主要目标是快速,健壮和易用
+
 *MySQL* 具有运行速度很快,容易使用,支持查询语句,多个用户可同时连接客户机和服务器,可以运行
 在各种版本的UNIX以及非UNIX得系统上等优点
 
@@ -20,21 +25,21 @@
 
 ***
 ### create创建数据库表
-`create table test01_01(
- name varchar(40),
- age int(5),
- address varchar(50)
-);`
+`create table test01_01(``
+` name varchar(40),``
+` age int(5),``
+` address varchar(50)`
+`);`
 
 ### select创建数据库表
 `create table test01_02 select * from test01_01;`
 
 ### 显示数据库表信息
-`1. show tables [from db_name] [like wild]
-2. show columns from tbl_name [from db_name] [like wild]
-3. show index from tbl_name [from db_name]
-4. show table status [from db_name] [like  wild]
-5. {describe| desc} tbl_name {col_name | wild} `
+`1. show tables [from db_name] [like wild]`
+`2. show columns from tbl_name [from db_name] [like wild]`
+`3. show index from tbl_name [from db_name]`
+`4. show table status [from db_name] [like  wild]`
+`5. {describe| desc} tbl_name {col_name | wild} `
 
 ### alter修改表结构
 #### 增加列
@@ -52,15 +57,16 @@
 `drop table if exists test01_04;`
 
 ###insert添加数据
-`insert test01_01 values('jack','23','beijing'),
-('gery','34,'ah')`
+`insert test01_01 values('jack','23','beijing'),`
+`('gery','34,'ah');`
+
 **这种形式insert不能插入多行**
 `insert test01_01 set name = 'sara';`
 
 ### insert...select添加数据
 `insert into test01_02 select * from test01_01;`
-`insert into test01_02(name)
-select name from test01_01;`
+`insert into test01_02(name)`
+`select name from test01_01;`
 
 ### select查询
 *选择哪些行*
