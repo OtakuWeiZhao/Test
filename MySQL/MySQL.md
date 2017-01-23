@@ -25,29 +25,24 @@
 
 ***
 ### create创建数据库表
-`create table test01_01(`
-
-` name varchar(40),`
-
-` age int(5),`
-
-` address varchar(50)`
-
-`);`
-
+```
+create table test01_01(
+    name varchar(40),
+    age int(5),
+    address varchar(50)
+);
+```
 ### select创建数据库表
 `create table test01_02 select * from test01_01;`
 
 ### 显示数据库表信息
-`1. show tables [from db_name] [like wild]`
-
-`2. show columns from tbl_name [from db_name] [like wild]`
-
-`3. show index from tbl_name [from db_name]`
-
-`4. show table status [from db_name] [like  wild]`
-
-`5. {describe| desc} tbl_name {col_name | wild} `
+```
+1. show tables [from db_name] [like wild]
+2. show columns from tbl_name [from db_name] [like wild]
+3. show index from tbl_name [from db_name]
+4. show table status [from db_name] [like  wild]
+5. {describe| desc} tbl_name {col_name | wild}
+```
 
 ### alter修改表结构
 #### 增加列
@@ -65,11 +60,13 @@
 `drop table if exists test01_04;`
 
 ###insert添加数据
-`insert test01_01 values('jack','23','beijing'),`
-
-`('gery','34,'ah');`
+```
+insert test01_01 values('jack','23','beijing'),
+('gery','34,'ah');
+```
 
 **这种形式insert不能插入多行**
+
 `insert test01_01 set name = 'sara';`
 
 ### insert...select添加数据
