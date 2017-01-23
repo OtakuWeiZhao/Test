@@ -25,10 +25,14 @@
 
 ***
 ### create创建数据库表
-`create table test01_01(``
-` name varchar(40),``
-` age int(5),``
+`create table test01_01(`
+
+` name varchar(40),`
+
+` age int(5),`
+
 ` address varchar(50)`
+
 `);`
 
 ### select创建数据库表
@@ -36,9 +40,13 @@
 
 ### 显示数据库表信息
 `1. show tables [from db_name] [like wild]`
+
 `2. show columns from tbl_name [from db_name] [like wild]`
+
 `3. show index from tbl_name [from db_name]`
+
 `4. show table status [from db_name] [like  wild]`
+
 `5. {describe| desc} tbl_name {col_name | wild} `
 
 ### alter修改表结构
@@ -58,6 +66,7 @@
 
 ###insert添加数据
 `insert test01_01 values('jack','23','beijing'),`
+
 `('gery','34,'ah');`
 
 **这种形式insert不能插入多行**
@@ -65,21 +74,30 @@
 
 ### insert...select添加数据
 `insert into test01_02 select * from test01_01;`
+
 `insert into test01_02(name)`
+
 `select name from test01_01;`
 
 ### select查询
 *选择哪些行*
+
 `select selection_list`
 *从何处选择行*
+
 `from table_list`
 *行必须满足什么条件*
+
 `where primary_constraint`
 *怎样对结果进行分组*
+
 `group by grouping columns`
 *行必须满足的第二条件*
+
 `having secondary_constraint`
 *怎样对结果进行排序*
+
 `order by sorting_columns`
+
 *结果限定*
 `limit count`
