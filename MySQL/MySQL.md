@@ -62,7 +62,7 @@ create table test01_01(
 ###insert添加数据
 ```
 insert test01_01 values('jack','23','beijing'),
-('gery','34,'ah');
+  ('gery','34,'ah');
 ```
 
 **这种形式insert不能插入多行**
@@ -72,9 +72,11 @@ insert test01_01 values('jack','23','beijing'),
 ### insert...select添加数据
 `insert into test01_02 select * from test01_01;`
 
-`insert into test01_02(name)`
+```
+insert into test01_02(name)
 
-`select name from test01_01;`
+select name from test01_01;
+```
 
 ### select查询
 *选择哪些行*
