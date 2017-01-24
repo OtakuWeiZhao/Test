@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="black_and_white"
+  id="myeclipse.1481034069046"
+  context-root="/black_and_white"
+  j2ee-spec="5.0"
+  archive="black_and_white.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

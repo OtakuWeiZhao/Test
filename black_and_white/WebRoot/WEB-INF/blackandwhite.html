@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>author zhao</title>
+		<link rel="stylesheet" type="text/css" href="./styles.css">
+
+	</head>
+
+	<body>
+		<h2>
+			score
+		</h2>
+		<h2 id="score">
+			0
+		</h2>
+
+		<div id="main">
+			<div id="con"></div>
+		</div>
+
+	</body>
+	<script>
+var clock = null;
+var state = 0;
+var speed = 5;
+
+function init() {
+	for ( var i = 0; i < 4; i++) {
+		createrow();
+	}
+	$('main').onclick = function(ev) {
+		judge(ev);
+	}
+	clock = window.setInterval('move()', 30);
+}
+//创建div,参数className是类名
+function creatediv(className) {
+	var div = document.createElement('div');
+	div.className = className;
+	return div;
+}
+//创造一个<div class="row">并且有四个子节点<div class="cell">
+function createrow() {
+	var con = $('con');
+	var row = creatediv('row');//创建div className=row
+	var arr = createcell();//定义div cell的类名,其中一个为cell black
+
+	con.appendChild(row); //添加row为con的子节点
+
+	for ( var i = 0; i < 4; i++) {
+		row.appendChild(creatediv(arr[i]));//添加row的子节点cell
+	}
+
+	if (con.firstChild == null) {
+		con.appendChild(row);
+	} else {
+		con.insertBefore(row, con.firstChild);
+	}
+}
+
+function $(id) {
+	return document.getElementById(id);
+}
+
+//删除div#con的子节点中最后那个<div class="row">
+function delrow() {
+	var con = $('con');
+	if (con.childNodes.length == 6) {
+		con.removeChild(con.lastChild);
+	}
+}
+//创建一个类名的数组，其中一个为clee black,其余为cell
+function createcell() {
+	var temp = [ 'cell', 'cell', 'cell', 'cell', ];
+	var i = Math.floor(Math.random() * 4);//随机生成黑块
+	temp[i] = 'cell black';
+	return temp;
+}
+
+function move() {
+	var con = $('con');
+	var top = parseInt(window.getComputedStyle(con, null)['top']);
+
+	if (speed + top > 0) {
+		top = 0;
+	} else {
+		top += speed;
+	}
+	con.style.top = top + 'px';
+
+	if (top == 0) {
+		createrow();
+		con.style.top = '-100px';
+		delrow();
+	} else if (top == (-100 + speed)) {
+		var rows = con.childNodes;
+		if ((rows.length == 5) && (rows[rows.length - 1].pass != 1)) {
+			fail();
+		}
+	}
+}
+
+function fail() {
+	clearInterval(clock);
+	confirm('Your final scope is ' + parseInt($('score').innerHTML));
+}
+
+function judge(ev) {
+	if (ev.target.className.indexOf('black') == -1) {
+	} else {
+		ev.target.className = 'cell';
+		ev.target.parentNode.pass = 1;
+		score();
+	}
+}
+function speedup() {
+	speed += 2;
+	if (speed == 20) {
+		alert('god like');
+	}
+}
+function score() {
+	var newscore = parseInt($('score').innerHTML) + 1;
+	$('score').innerHTML = newscore;
+	if (newscore % 10 == 0) {
+		speedup();
+	}
+}
+init();
+</script>
+</html>
