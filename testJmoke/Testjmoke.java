@@ -15,7 +15,7 @@ import org.junit.Test;
 public class Testjmoke {
 	@Test
 	/**
-	 * ²âÊÔ½Ó¿Úmock
+	 * æµ‹è¯•æ¥å£mock
 	 */
 	public void t1(){
 		Mockery context = new JUnit4Mockery();
@@ -30,7 +30,7 @@ public class Testjmoke {
 	}
 	@Test
 	/**
-	 * ²âÊÔÀàmock
+	 * æµ‹è¯•ç±»mock
 	 * */
 	public void t12(){
 		Mockery context = new JUnit4Mockery(){{
