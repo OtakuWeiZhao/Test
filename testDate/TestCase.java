@@ -14,6 +14,7 @@ public class TestCase {
 //		long time = myDate.getTime();
 //		System.out.println(time);
 //	}
+	/**modify*/
 	Date myDate = new Date(1484374829);
 	@Test
 	public void timeStamp(){
