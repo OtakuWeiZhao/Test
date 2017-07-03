@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * 连接数据库
  */
-public class Demo1 {
+public class Demo01 {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		// 使用JDBC
 		// 1 加载驱动
